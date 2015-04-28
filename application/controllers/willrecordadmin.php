@@ -27,8 +27,8 @@ class Willrecordadmin extends CI_Controller {
 
 	// 登入
 	public function admin_loginset(){
-		if ( $_POST['adminID'] == 'argoskenny' && md5($_POST['password']) == '0eabae563976cc877167483ac36226f2' ) {
-			$this->nativesession->set('ADMIN_ID','argoskenny');
+		if ( $_POST['adminID'] == ADMIN_ID && md5($_POST['password']) == ADMIN_PWD ) {
+			$this->nativesession->set('ADMIN_ID',ADMIN_ID);
 			header('location:'.base_url().'willrecordadmin/admin_index');
 		}
 		else{

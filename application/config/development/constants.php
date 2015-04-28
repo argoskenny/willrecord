@@ -36,6 +36,15 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|--------------------------------------------------------------------------
+| 常數定義
+|--------------------------------------------------------------------------
+|
+*/
+define('ADMIN_ID', 'argos');
+define('ADMIN_PWD', '0eabae563976cc877167483ac36226f2');
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
