@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 新計劃提示 */
+.newtopc {
+	text-align: center;
+}
+.newtopc h2{
+	font-size: 20px;
+}
+.newtopc p{
+	font-size: 15px;
+}
+.jumbotron{
+	padding-top: 30px;
+}
+
+/* 計劃 */
+.panel-primary{
+	margin-bottom: 30px;
+}
+#end_topic{
+	color: #000000;
+}
+.list-group-item a{
+	color: #a94442;
+}
+.list-group-item a:hover{
+	color: #812F2D;
+}
+
+.list-group-item-danger {
+	color: #a94442;
+	background-color: #f2dede;
+}
+.panel-primary .btn:first-child{
+	padding: 0px 4px;
+	line-height: 1;
+	margin-left: 14px;
+}
+.panel-primary .dropdown-menu{
+	left: -127px;
+}
+.topic_time{
+	float: right;
+	display: block;
+}
+.label{
+	margin-right: 15px;
+	padding: .2em .6em;
+}
+.list-group-item-danger{
+	border-top: 1px solid #000000;
+}
+.topic_count .table{
+	margin-bottom: 0px;
+}
+.topic_count{
+	border-top: 1px solid #000000;
+}
+.topic_count h4{
+	font-size: 20px;
+	font-weight: bold;
+}
+.topic_count .table tbody tr td,.topic_count .table tbody tr th{
+	border-top: none;
+	padding-left: 0px;
+}
+.count_split{
+	margin: 0px 5px;
+}
+.unset_days{
+	color: #999;
+}
+.success_days{
+	font-weight: bold;
+	color: #5cb85c;
+}
+.fail_days{
+	font-weight: bold;
+	color: #a94442;
+}
+
+/* 儲存成功 */
+.saveok_content
+{
+	margin-top:100px;
+	padding:30px 0px;
+	color:#FFFFFF;
+	font-size:15px;
+	line-height:30px;
+	border:none;
+	background-color:#000000;
+	text-align:center;
+}
+.saveok_btn
+{
+	border:none;
+	height:30px;
+	margin-top:10px;
+}
+
+@media screen and (max-width:767px) {
+	.topic_time{
+		display: block;
+		float: none;
+	}
+}
+
+@media screen and (max-width:460px) {
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 新計劃提示 */
+.newtopc {
+	text-align: center;
+}
+.newtopc h2{
+	font-size: 20px;
+}
+.newtopc p{
+	font-size: 15px;
+}
+.jumbotron{
+	padding-top: 30px;
+}
+
+/* 儲存成功 */
+.saveok_content
+{
+	margin-top:100px;
+	padding:30px 0px;
+	color:#FFFFFF;
+	font-size:15px;
+	line-height:30px;
+	border:none;
+	background-color:#000000;
+	text-align:center;
+}
+.saveok_btn
+{
+	border:none;
+	height:30px;
+	margin-top:10px;
+}
+
+@media screen and (max-width:767px) {
+}
+
+@media screen and (max-width:460px) {
+}

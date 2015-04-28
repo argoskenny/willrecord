@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 頭像 */
+.avaterPic{
+	position:relative;
+	display:block;
+	border:#CCC 1px solid;
+	width:170px;
+	height:170px;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:40px;
+	text-align:center;
+}
+.avaterPicBorder{
+	width:150px;
+	height:150px;
+	overflow:hidden;
+}
+.avaterPic img {
+	height:150px;
+}
+.avaterPic_loading{
+	text-align:center;
+	display: block;
+	margin-top: -100px;
+	z-index: 5;
+	display: none;
+}
+.avaterPic_loading img{
+	width:50px;
+	height:50px;
+}
+.imgeditarea{
+	margin-bottom: 30px;
+	padding: 10px;
+	border-radius: 4px;
+	border:1px solid #dddddd;
+	display: none;
+}
+.imgdefault{
+	background-color: #f2f2f2;
+}
+.imgdefault img {
+	margin: 0px auto;
+}
+#pic_upload{
+	width: 200px;
+}
+.edit_div{
+	width: 170px;
+	display: block;
+	margin: 0px auto;
+}
+.form-group{
+	margin-bottom: 30px;
+}
+.form-group button{
+	display: block;
+	margin-bottom: 5px;
+}
+.help-block{
+	font-size: 12px;
+}
+/* 編輯區域 */
+.jcrop-holder{
+	margin: 0px auto;
+}
+
+/* 送出按鈕 */
+.edit_submit{
+	display: none;
+}
+.form-group .edit_submit button{
+	display: inline-block;
+}
+
+/* 基本資料 */
+.membermail{
+	color: #999;
+}
+.edit_detail{
+	border-left: 1px solid #dddddd;
+	min-height: 500px;
+}
+.memberData_loading{
+	display: none;
+}
+.memberData_loading img{
+	width: 50px;
+	height: 50px;
+}
+
+@media screen and (max-width:767px) {
+	.edit_detail{
+		border-left: none;
+		min-height: 500px;
+	}
+}
+
+@media screen and (max-width:460px) {
+}
