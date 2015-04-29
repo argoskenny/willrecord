@@ -30,31 +30,33 @@
 	<?php $this->load->view('willrecord/menu'); ?>
 	
 	<div class="main">
-		<div class="container registerArea">
-			<h2>註冊會員</h2>
-			<form role="form" action="newreg" method="POST" name="registerFrom">
-				<div class="form-group">
-					<input type="text" class="form-control" id="inputAccount" name="inputAccount" placeholder="請輸入帳號">
-					<span class="alertText" id="alertAccount"></span>
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" id="inputPassword1" name="inputPassword1" placeholder="請輸入密碼">
-					<span class="alertText" id="alertPassword1"></span>
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="請確認密碼">
-					<span class="alertText" id="alertPassword2"></span>
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="請輸入電子郵件">
-					<span class="alertText" id="alertEmail"></span>
-				</div>
-				<div class="btnMiddle">
-					<button type="button" class="btn btn-success" id="registerSubmit">免費註冊</button>
-					<button type="button" class="btn btn-default" disabled="disabled" id="registerLoading">處理中 <img src="assets/img/backgrounds/loading_small.gif"></button>
-				</div>
-			</form>
-			<p class="reg_attention">注意事項：請妥善保管您的密碼，並使用真實的電子郵件，以免遺失密碼時無法重新設定。意志曆絕不會寄送任何無聊又煩人的電子報，敬請安心註冊。</p>
+		<div class="container">
+			<div class="registerArea">
+				<h2>註冊會員</h2>
+				<form role="form" action="newreg" method="POST" name="registerFrom">
+					<div class="form-group">
+						<input type="text" class="form-control" id="inputAccount" name="inputAccount" placeholder="請輸入帳號">
+						<span class="alertText" id="alertAccount"></span>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="inputPassword1" name="inputPassword1" placeholder="請輸入密碼">
+						<span class="alertText" id="alertPassword1"></span>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="請確認密碼">
+						<span class="alertText" id="alertPassword2"></span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="請輸入電子郵件">
+						<span class="alertText" id="alertEmail"></span>
+					</div>
+					<div class="btnMiddle">
+						<button type="button" class="btn btn-success" id="registerSubmit">免費註冊</button>
+						<button type="button" class="btn btn-default" disabled="disabled" id="registerLoading">處理中 <img src="assets/img/backgrounds/loading_small.gif"></button>
+					</div>
+				</form>
+				<p class="reg_attention">注意事項：請妥善保管您的密碼，並使用真實的電子郵件，以免遺失密碼時無法重新設定。意志曆絕不會寄送任何無聊又煩人的電子報，敬請安心註冊。</p>
+			</div>
 		</div>
 	</div>
 
