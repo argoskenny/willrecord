@@ -20,6 +20,7 @@ class Willrecord extends CI_Controller {
 
 		// 自動登入
 		$this->cookie_check();
+		
 	}
 	
 	// 首頁
