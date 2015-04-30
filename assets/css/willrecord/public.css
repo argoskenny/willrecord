@@ -24,15 +24,14 @@ body{
 	font-family:Microsoft JhengHei, Arial, Helvetica, sans-serif, "新細明體";
 	margin-bottom: 100px;
 	margin:0;
-	height: 100%;
 }
-.main{
-	height: 100%;
+.main .container{
+	min-height: 800px;
 }
 .container{
 	border-left: 1px solid #0068C1;
 	border-right: 1px solid #0068C1;
-	height: 100%;
+	color: #0068C1;
 }
 .navbar{
 	border: 0px solid transparent;
@@ -64,7 +63,7 @@ body{
 	border-color: #FFF;
 }
 .navbar-inverse .navbar-brand, .navbar .navbar-right li a {
-	font-size: 25px;
+	font-size: 20px;
 	color: #0068C1;
 }
 .navbar-header .navbar-brand:hover{
@@ -120,11 +119,19 @@ body{
 
 /* 底端 footer */
 .pubclic_footer {
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 	height: 100px;
 	background-color: #FFFFFF;
+}
+.pubclic_footer .container{
+	border-top:1px solid #0068C1;
+	border-bottom:1px solid #0068C1;
+	height: 80px;
+}
+/* 首頁特殊footer */
+.pubclic_footer, .pubclic_footer a{
+	background-color: #FFF;
+	color: #0068C1;
 }
 .footer_fixed{
 	margin-top: 30px;

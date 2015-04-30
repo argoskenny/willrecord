@@ -28,8 +28,8 @@
 <body ontouchstart="">
 	
 	<?php $this->load->view('willrecord/menu'); ?>
-	
-	<div class="container">
+	<div class="main">
+		<div class="container">
 
 		<form class="form-signin" id="loginForm">
 			<div class="form-signin-heading">
@@ -51,7 +51,7 @@
 				<a href="forgetpwd">忘記密碼？</a>
 			</div>
 		</form>
-		
+		</div>
     </div>
 
 	<!-- FOOTER -->

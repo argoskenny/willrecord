@@ -2,6 +2,10 @@
 /* CSS Document */
 .registerArea{
 	max-width:500px;
+	padding: 15px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .form-group .alertText{
 	display:none;
