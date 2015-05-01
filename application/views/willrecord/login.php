@@ -32,16 +32,14 @@
 		<div class="container">
 
 		<form class="form-signin" id="loginForm">
-			<div class="form-signin-heading">
-				登入您的意志曆
-			</div>
+			<h2>登入</h2>
 			<div class="alert alert-block alert-danger" id="alertMsg">
 				<h4><b>帳號密碼錯誤</b></h4>
 				<p>請輸入正確的帳號及密碼</p>
 			</div>
 			<input type="text" class="form-control" name="account" id="account" placeholder="帳號" autofocus="">
 			<input type="password" class="form-control" name="password" id="password" placeholder="密碼">
-			<button class="btn btn-lg btn-info btn-block" type="button" name="send" id="send">登入</button>
+			<a class="btn btn-lg btn-block" type="button" name="send" id="send">登入</a>
 			<div class="checkbox">
 				<label>
 					<input type="checkbox" id="remember_checkbox" <?php echo $autochecked;?> >下次自動登入

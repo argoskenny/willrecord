@@ -23,17 +23,19 @@
 	<?php $this->load->view('willrecord/menu'); ?>
 	
 	<div class="main">
-		<div class="container registerArea">
-			<h2>忘記密碼？</h2>
-			<form role="form" action="send_forget_pwd_mail" method="POST">
-				<div class="form-group">
-					<label for="forgetpwd_account" class="remind_forgetpwd">請輸入您的帳號。系統將寄信至您註冊時所填寫的Email，內含可讓您重設密碼的連結。</label>
-					<input type="text" class="form-control" id="forgetpwd_account" name="forgetpwd_account" placeholder="請輸入帳號">
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-success">寄送電子郵件</button>
-				</div>
-			</form>
+		<div class="container">
+			<div class="registerArea">
+				<h2>忘記密碼？</h2>
+				<form role="form" action="send_forget_pwd_mail" method="POST">
+					<div class="form-group">
+						<label for="forgetpwd_account" class="remind_forgetpwd">請輸入您的帳號。系統將寄信至您註冊時所填寫的Email，內含可讓您重設密碼的連結。</label>
+						<input type="text" class="form-control" id="forgetpwd_account" name="forgetpwd_account" placeholder="請輸入帳號">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">寄送電子郵件</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 

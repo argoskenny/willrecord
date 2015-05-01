@@ -51,8 +51,8 @@
 						<span class="alertText" id="alertEmail"></span>
 					</div>
 					<div class="btnMiddle">
-						<button type="button" class="btn btn-success" id="registerSubmit">免費註冊</button>
-						<button type="button" class="btn btn-default" disabled="disabled" id="registerLoading">處理中 <img src="assets/img/backgrounds/loading_small.gif"></button>
+						<a class="btn btn-success" id="registerSubmit">免費註冊</a>
+						<a class="btn btn-default" disabled="disabled" id="registerLoading">處理中 <img src="assets/img/backgrounds/loading_small.gif"></a>
 					</div>
 				</form>
 				<p class="reg_attention">注意事項：請妥善保管您的密碼，並使用真實的電子郵件，以免遺失密碼時無法重新設定。意志曆絕不會寄送任何無聊又煩人的電子報，敬請安心註冊。</p>

@@ -25,15 +25,13 @@ body{
 	margin-bottom: 100px;
 	margin:0;
 }
-.btn{
+.btn, .btn:visited, .btn-success, .btn-success:visited{
 	border-radius: 0px;
-}
-.btn-success, .btn-success:visited{
 	background-color: #FFF;
 	color: #F07700;
 	border-color: #F07700;
 }
-.btn-success:hover, .btn-success:active{
+.btn:hover, .btn:active, .btn-success:hover, .btn-success:active{
 	background-color: #F07700;
 	color: #FFF;
 	border-color: #F07700;
@@ -42,6 +40,9 @@ body{
 	border-left: 1px solid #0068C1;
 	border-right: 1px solid #0068C1;
 	color: #0068C1;
+}
+.form-control{
+	border-radius: 0px;
 }
 .navbar{
 	border: 0px solid transparent;
@@ -75,6 +76,7 @@ body{
 .navbar-inverse .navbar-brand, .navbar .navbar-right li a {
 	font-size: 20px;
 	color: #0068C1;
+	background-color: #FFFFFF;
 }
 .navbar-header .navbar-brand:hover{
 	background-color:#004D8E;
@@ -109,13 +111,13 @@ body{
 
 /* 輸入欄位邊框陰影 */
 .form-control{
-	height:40px;
+	height:35px;
 }
 .form-control:focus
 {
-	border: #999 solid 1px;
-	box-shadow: 0px 0px 10px 1px #999;
-	-webkit-box-shadow: 0px 0px 10px 1px #999;
+	border: #0068C1 solid 1px;
+	box-shadow: 0px 0px 10px 1px #0068C1;
+	-webkit-box-shadow: 0px 0px 10px 1px #9AD0FF;
 }
 
 /* 主內容 */
