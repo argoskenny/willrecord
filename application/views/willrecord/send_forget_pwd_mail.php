@@ -23,10 +23,12 @@
 	<?php $this->load->view('willrecord/menu'); ?>
 	
 	<div class="main">
-		<div class="container registerArea">
-			<div class="alert alert-success">
-				<strong><?php echo $status;?></strong><br/>
-				<?php echo $action;?>
+		<div class="container">
+			<div class="registerArea">
+				<div class="alert alert-success">
+					<strong><?php echo $status;?></strong><br/>
+					<?php echo $action;?>
+				</div>
 			</div>
 		</div>
 	</div>

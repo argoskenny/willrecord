@@ -46,12 +46,11 @@
 					<p>只要簡單的三個步驟，即可建立新的計劃，並馬上開始向您的偉大目標邁進！</p>
 					<a data-toggle="modal" href="#step1" class="btn btn-lg btn-success" >創建一項新計劃</a>
 				</div>
-			<?php echo $intro_self;
-			} else { ?>
+			<?php } else { ?>
 				<div class="jumbotron newtopc">
 					<h2>尚無任何新計劃</h2>
 				</div>
-			<?php echo $intro_self;} ?>
+			<?php } ?>
 		</div>
 	</div>
 

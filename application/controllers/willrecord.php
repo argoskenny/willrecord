@@ -50,7 +50,15 @@ class Willrecord extends CI_Controller {
 		$dataArr = $checkedArr['dataArr'];
 		$headPic = $this->get_headimg($dataArr);
 		$tab_title = ( !empty($dataArr[0]['name']) ) ? $dataArr[0]['name'] : $account;
-		$record_topic_html = $this->get_tab_html('record',$headPic,$tab_title,$account,$record_condition);
+		
+		// 個人簡介
+		$intro_self = '';
+		if ( !empty($dataArr[0]['description']) )
+		{
+			$intro_self = 	nl2br($dataArr[0]['description']);
+		}
+
+		$record_topic_html = $this->get_tab_html('record',$headPic,$tab_title,$account,$record_condition,$intro_self);
 		
 		// 計劃資料
 		$topicWhereArr = array( 'm_id' => $dataArr[0]['id'], 'end_time' => '0', 'is_close' => '1' );
@@ -273,15 +281,6 @@ class Willrecord extends CI_Controller {
 				break;
 		}
 
-		// 個人簡介
-		$intro_self = '';
-		if ( !empty($dataArr[0]['description']) ) {
-			$intro_self = 	'<div class="panel panel-default intro_self">
-								<div class="panel-heading">'.$tab_title.'的簡介</div>
-								<div class="panel-body">'.nl2br($dataArr[0]['description']).'</div>
-							</div>';
-		}
-
 		$data['shareaccount'] = $account;
 		$data['account'] = $login_account;
 		$data['login_mid'] = $login_mid;
@@ -296,7 +295,7 @@ class Willrecord extends CI_Controller {
 		$data['record_calender_html'] = $record_calender_html;
 		$data['record_count_html'] = $record_count_html;
 		$data['disqus_html'] = $disqus_html;
-		$data['intro_self'] = $intro_self;
+
 		$this->load->view('willrecord/record',$data);
 	}
 
@@ -314,7 +313,15 @@ class Willrecord extends CI_Controller {
 		$dataArr = $checkedArr['dataArr'];
 		$headPic = $this->get_headimg($dataArr);
 		$tab_title = ( !empty($dataArr[0]['name']) ) ? $dataArr[0]['name'] : $account;
-		$record_topic_html = $this->get_tab_html('history',$headPic,$tab_title,$account,$record_condition);
+
+		// 個人簡介
+		$intro_self = '';
+		if ( !empty($dataArr[0]['description']) )
+		{
+			$intro_self = 	nl2br($dataArr[0]['description']);
+		}
+
+		$record_topic_html = $this->get_tab_html('history',$headPic,$tab_title,$account,$record_condition,$intro_self);
 
 		// 計劃資料
 		$topicWhereArr = array( 'm_id' => $dataArr[0]['id'], 'end_time !=' => '0', 'is_close' => '0' );
@@ -467,7 +474,15 @@ class Willrecord extends CI_Controller {
 		$dataArr = $checkedArr['dataArr'];
 		$headPic = $this->get_headimg($dataArr);
 		$tab_title = ( !empty($dataArr[0]['name']) ) ? $dataArr[0]['name'] : $account;
-		$record_topic_html = $this->get_tab_html('collect',$headPic,$tab_title,$account,$record_condition);
+
+		// 個人簡介
+		$intro_self = '';
+		if ( !empty($dataArr[0]['description']) )
+		{
+			$intro_self = 	nl2br($dataArr[0]['description']);
+		}
+
+		$record_topic_html = $this->get_tab_html('collect',$headPic,$tab_title,$account,$record_condition,$intro_self);
 
 		// 收藏處理
 		$whereArr['m_id'] = $mid;
@@ -513,7 +528,15 @@ class Willrecord extends CI_Controller {
 		$dataArr = $checkedArr['dataArr'];
 		$headPic = $this->get_headimg($dataArr);
 		$tab_title = ( !empty($dataArr[0]['name']) ) ? $dataArr[0]['name'] : $account;
-		$record_topic_html = $this->get_tab_html('setup',$headPic,$tab_title,$account,$record_condition);
+
+		// 個人簡介
+		$intro_self = '';
+		if ( !empty($dataArr[0]['description']) )
+		{
+			$intro_self = 	nl2br($dataArr[0]['description']);
+		}
+
+		$record_topic_html = $this->get_tab_html('setup',$headPic,$tab_title,$account,$record_condition,$intro_self);
 
 		// 頭像編輯
 		$updateLock = '';
@@ -980,10 +1003,9 @@ class Willrecord extends CI_Controller {
 	 * @param String 登入狀況 self:登入者 other:非登入者
 	 * @return 頁籤HTML碼
 	 */
-	function get_tab_html($target_page,$headPic,$tab_title,$account,$record_condition)
+	function get_tab_html($target_page,$headPic,$tab_title,$account,$record_condition,$intro_self)
 	{
 		$LOGIN_ID = $this->nativesession->get('LOGIN_ID');
-		
 		$public_tab = array('record' => '',
 							'history' => '',
 							'collect' => '',
@@ -1015,9 +1037,8 @@ class Willrecord extends CI_Controller {
 		}
 		
 		$html = '<div class="record_title">
-					<img src="'.$headPic.'" alt="'.$tab_title.'" class="img-circle">
-					<br/>
-					<b><span id="tab_name">'.$tab_title.'</span>的意志曆</b>
+					<img src="'.$headPic.'" alt="'.$tab_title.'" class="img-thumbnail">
+					<p><span id="tab_name">'.$tab_title.'</span><br>'.$intro_self.'</p>
 				</div>
 				<ul class="nav nav-tabs nav-justified">
 					<li '.$public_tab['record'].'><a href="record/'.$account.'"><span class="glyphicon glyphicon-calendar"></span>目前計劃</a></li>

@@ -23,10 +23,12 @@
 	<?php $this->load->view('willrecord/menu'); ?>
 	
 	<div class="main">
-		<div class="container registerArea">
-			<div class="alert alert-success">
-				<strong>恭喜！您已成功設定新密碼囉！</strong><br/>
-				請<a href="login" class="alert-link">點擊此連結並登入帳號</a>，繼續戰鬥吧！
+		<div class="container">
+			<div class="registerArea">
+				<div class="alert alert-success">
+					<strong>恭喜！您已成功設定新密碼囉！</strong><br/>
+					請<a href="login" class="alert-link">點擊此連結並登入帳號</a>，繼續戰鬥吧！
+				</div>
 			</div>
 		</div>
 	</div>

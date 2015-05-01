@@ -13,7 +13,7 @@ h1{
             animation: fadein 1s;
 }
 .intro_top{
-	margin-top: 50px;
+	margin: 50px 0px;
 	color: #0068C1;
 
 	-webkit-animation: fadein 3s; /* Safari and Chrome */

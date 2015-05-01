@@ -7,4 +7,8 @@ $(document).ready(function(){
 	{
 		$('.main .container').css('height', main_container_height);
 	};
+	setTimeout( function() {
+		$("body").animate({opacity:1},10);
+	}, 50);
+
 });
