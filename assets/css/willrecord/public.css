@@ -25,6 +25,19 @@ body{
 	margin-bottom: 100px;
 	margin:0;
 }
+.btn{
+	border-radius: 0px;
+}
+.btn-success, .btn-success:visited{
+	background-color: #FFF;
+	color: #F07700;
+	border-color: #F07700;
+}
+.btn-success:hover, .btn-success:active{
+	background-color: #F07700;
+	color: #FFF;
+	border-color: #F07700;
+}
 .container{
 	border-left: 1px solid #0068C1;
 	border-right: 1px solid #0068C1;

@@ -32,10 +32,9 @@
 	<div class="main">
 		<div class="container">
 			<div class="intro_top">
-				<h2>邁步向前吧！</h2>
+				<h2>築夢踏實</h2>
 				<p>紀錄您的恆心與毅力，留下您的辛勞與汗水。意志曆將協助您實現心願、改變一切！</p>
-				<p>使用意志曆能夠以最輕鬆簡單的方式，寫下您努力不懈的足跡！讓您能夠將心力專注於個人計劃之上！</p>
-				<p>請放一百二十個心，這裡的一切<strong>完全免費！</strong></p>
+				<p>使用意志曆能夠以最輕鬆簡單的方式，寫下您努力不懈的足跡！唯有一點一滴的累積，才能成就更美好的自己。</p>
 				<a class="btn btn-lg btn-success" href="register" role="button">免費註冊</a>
 			</div>
 			

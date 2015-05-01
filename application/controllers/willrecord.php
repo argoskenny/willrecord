@@ -2,7 +2,8 @@
 class Willrecord extends CI_Controller {
 	
 	// 建構子
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->database();
 		
@@ -19,14 +20,15 @@ class Willrecord extends CI_Controller {
 		$this->load->helper('cookie');
 
 		// 自動登入
-		$this->cookie_check();
-		
+		$this->cookie_check();	
 	}
 	
 	// 首頁
-	public function index(){
+	public function index()
+	{
 		$dataArr = $this->session_info();
-		if ( count($dataArr) > 0 ) {
+		if ( count($dataArr) > 0 )
+		{
 			$data['account'] = $dataArr[0]['account'];
 		}
 
@@ -35,7 +37,8 @@ class Willrecord extends CI_Controller {
 	}
 	
 	// 紀錄頁
-	public function record($account){
+	public function record($account)
+	{
 		// 存取登入者計劃資料
 		$uncheckArr = $this->session_info();
 		
@@ -298,7 +301,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 歷史頁
-	public function history($account){
+	public function history($account)
+	{
 		// 存取登入者計劃資料
 		$uncheckArr = $this->session_info();
 		
@@ -450,7 +454,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 收藏列表
-	public function collect($mid){
+	public function collect($mid)
+	{
 		// 存取登入者計劃資料
 		$uncheckArr = $this->session_info();
 		
@@ -495,7 +500,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 個人設定頁
-	public function setup($mid){
+	public function setup($mid)
+	{
 		// 存取登入者計劃資料
 		$uncheckArr = $this->session_info();
 		
@@ -574,7 +580,8 @@ class Willrecord extends CI_Controller {
 	}
 	
 	// 註冊
-	public function register(){
+	public function register()
+	{
 		$this->session_check();
 		
 		$data['title'] = '會員註冊';
@@ -582,7 +589,8 @@ class Willrecord extends CI_Controller {
 	}
 	
 	// 新註冊會員儲存
-	public function newreg(){
+	public function newreg()
+	{
 		$this->session_check();
 
 		$inputAccount = $_POST['inputAccount'];
@@ -630,7 +638,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 登入
-	public function login(){
+	public function login()
+	{
 		$this->session_check();
 		
 		// 自動登入預設選項 行動裝置自動勾選
@@ -645,14 +654,16 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 登出
-	public function logout(){
+	public function logout()
+	{
 		$this->nativesession->delete('LOGIN_ID');
 		delete_cookie('cookiedata');
 		header('location:'.base_url());
 	}
 
 	// 忘記密碼
-	public function forgetpwd(){
+	public function forgetpwd()
+	{
 		$this->session_check();
 			
 		$data['title'] = '忘記密碼';
@@ -660,7 +671,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 忘記密碼 寄信
-	public function send_forget_pwd_mail(){
+	public function send_forget_pwd_mail()
+	{
 		if( $_POST['forgetpwd_account'] == '' ) {
 			$data['status'] = '無此帳號';
 			$data['action'] = '返回<a href="forgetpwd">重設密碼頁面</a>';
@@ -749,7 +761,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 重設密碼
-	public function resetpwd(){
+	public function resetpwd()
+	{
 		// 檢查token
 		if ( $_GET['token'] == '' ) {
 			header('location:'.base_url());
@@ -801,7 +814,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 重設密碼 完成
-	public function resetdone(){
+	public function resetdone()
+	{
 		$RESET_ID = '';
 		$RESET_REGTIME = '';
 		$RESET_ID = $this->nativesession->get('PWD_RESET_MID');
@@ -841,7 +855,8 @@ class Willrecord extends CI_Controller {
 	}
 	
 	// 隱私權政策
-	public function privatelaw(){
+	public function privatelaw()
+	{
 		$dataArr = $this->session_info();
 		if ( count($dataArr) > 0 ) {
 			$data['account'] = $dataArr[0]['account'];
@@ -852,7 +867,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 使用條款
-	public function tou(){
+	public function tou()
+	{
 		$dataArr = $this->session_info();
 		if ( count($dataArr) > 0 ) {
 			$data['account'] = $dataArr[0]['account'];
@@ -863,7 +879,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 關於意志曆
-	public function about(){
+	public function about()
+	{
 		$dataArr = $this->session_info();
 		if ( count($dataArr) > 0 ) {
 			$data['account'] = $dataArr[0]['account'];
@@ -874,14 +891,16 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 反服貿
-	public function foolmow(){
+	public function foolmow()
+	{
 		$this->load->view('willrecord/foolmow');
 	}
 
 	// 主要頁籤 ================================
 
 	// 資料處裡 公開頁面
-	function get_data_info_public($account,$dataArr){
+	function get_data_info_public($account,$dataArr)
+	{
 		if ( count($dataArr) > 0 ) {
 			$login_account = $dataArr[0]['account'];
 			$login_mid = $dataArr[0]['id'];
@@ -920,7 +939,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 資料處理 私人頁面
-	function get_data_info_private($mid,$dataArr){
+	function get_data_info_private($mid,$dataArr)
+	{
 		if ( count($dataArr) > 0 && $mid == $dataArr[0]['id'] ) {
 			$returnArr['account'] = $dataArr[0]['account'];
 			$returnArr['login_mid'] = $dataArr[0]['id'];
@@ -935,7 +955,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 頭像處理
-	function get_headimg($dataArr){
+	function get_headimg($dataArr)
+	{
 		$memberDir = date('Ymd',$dataArr[0]['reg_time']);
 		if( $dataArr[0]['picture'] == '' ) {
 			$headPic = 'assets/img/head/defaultHead.jpg';
@@ -959,7 +980,8 @@ class Willrecord extends CI_Controller {
 	 * @param String 登入狀況 self:登入者 other:非登入者
 	 * @return 頁籤HTML碼
 	 */
-	function get_tab_html($target_page,$headPic,$tab_title,$account,$record_condition){
+	function get_tab_html($target_page,$headPic,$tab_title,$account,$record_condition)
+	{
 		$LOGIN_ID = $this->nativesession->get('LOGIN_ID');
 		
 		$public_tab = array('record' => '',
@@ -1008,7 +1030,8 @@ class Willrecord extends CI_Controller {
 	// 通用函式 ================================
 
 	// COOKIE登入驗證
-	function cookie_check(){
+	function cookie_check()
+	{
 		$LOGIN_ID = $this->nativesession->get('LOGIN_ID');
 		$cookiedata = $this->input->cookie('cookiedata');
 
@@ -1033,7 +1056,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 登入驗證
-	function session_check(){
+	function session_check()
+	{
 		$LOGIN_ID = $this->nativesession->get('LOGIN_ID');
 		if( !empty($LOGIN_ID) ) {
 			$whereArr = array( 'id' => $LOGIN_ID );
@@ -1046,7 +1070,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 登入資訊
-	function session_info(){
+	function session_info()
+	{
 		$LOGIN_ID = $this->nativesession->get('LOGIN_ID');
 		if( empty($LOGIN_ID) ) {
 			$dataArr = array();
@@ -1061,7 +1086,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 存取計劃統計資料
-	function topic_record_count($topicid, $tag){
+	function topic_record_count($topicid, $tag)
+	{
 		$record = array();
 		$sql = "SELECT t_id, COUNT(*) AS C 
 				FROM w_dayrecord 
@@ -1079,7 +1105,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 每日紀錄轉換文字
-	function switch_record_tag($tag){
+	function switch_record_tag($tag)
+	{
 		switch ($tag) {
 			case '0':
 				$str = '尚未紀錄';
@@ -1095,7 +1122,8 @@ class Willrecord extends CI_Controller {
 	}
 
 	// 數字的中文化
-	function chinese_number($sel_num = ''){
+	function chinese_number($sel_num = '')
+	{
 		$result = '';
 		if( !empty($sel_num) ) {
 			switch( intval($sel_num) ) {
@@ -1144,8 +1172,8 @@ class Willrecord extends CI_Controller {
 	 * @param String $key 密鈅
 	 * @return unknown
 	 */
-	function authcode($string, $operation, $key = '') {
-
+	function authcode($string, $operation, $key = '')
+	{
 		$key = md5($key ? $key : 'cn_7c91');
 		$key_length = strlen($key);
 
@@ -1186,5 +1214,4 @@ class Willrecord extends CI_Controller {
 			return str_replace('=', '', base64_encode($result));
 		}
 	}
-
 }
