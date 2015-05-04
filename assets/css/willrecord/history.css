@@ -50,13 +50,13 @@
 	padding: .2em .6em;
 }
 .list-group-item-danger{
-	border-top: 1px solid #000000;
+	border-top: 1px solid #0068C1;
 }
 .topic_count .table{
 	margin-bottom: 0px;
 }
 .topic_count{
-	border-top: 1px solid #000000;
+	border-top: 1px solid #0068C1;
 }
 .topic_count h4{
 	font-size: 20px;
@@ -90,7 +90,7 @@
 	font-size:15px;
 	line-height:30px;
 	border:none;
-	background-color:#000000;
+	background-color:#0068C1;
 	text-align:center;
 }
 .saveok_btn

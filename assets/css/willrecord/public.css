@@ -104,12 +104,17 @@ body{
 .img-thumbnail{
 	width: 100px;
 	height: 100px;
+	border-radius: 0px;
+	border: 1px solid #0068C1;
 }
 .record_title p{
 	display: inline-block;
 }
 .nav-justified{
 	margin-bottom: 60px;
+}
+.tab_desc{
+	color: #666;
 }
 
 /* 輸入欄位邊框陰影 */
@@ -129,7 +134,7 @@ body{
 }
 .jumbotron{
 	background-color: #FFF;
-	border : 1px solid #dddddd;
+	border : 1px solid #0068C1;
 }
 
 /* 底端 footer */

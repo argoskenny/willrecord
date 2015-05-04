@@ -1038,7 +1038,10 @@ class Willrecord extends CI_Controller {
 		
 		$html = '<div class="record_title">
 					<img src="'.$headPic.'" alt="'.$tab_title.'" class="img-thumbnail">
-					<p><span id="tab_name">'.$tab_title.'</span><br>'.$intro_self.'</p>
+					<p><span id="tab_name">'.$tab_title.'</span>
+						<br>
+						<span class="tab_desc">'.$intro_self.'</span>
+					</p>
 				</div>
 				<ul class="nav nav-tabs nav-justified">
 					<li '.$public_tab['record'].'><a href="record/'.$account.'"><span class="glyphicon glyphicon-calendar"></span>目前計劃</a></li>
